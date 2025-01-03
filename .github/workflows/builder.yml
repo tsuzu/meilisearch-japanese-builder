@@ -21,7 +21,7 @@ jobs:
           git checkout $GITHUB_REF_NAME
           cargo build --release -p meilisearch -p meilitool \
             --no-default-features \
-            --features "analytics mini-dashboard japanese"
+            --features "mini-dashboard japanese"
 
       - name: Archive MeiliSearch
         uses: actions/upload-artifact@v4
