@@ -28,13 +28,13 @@ jobs:
         with:
           name: meilisearch
           path: |
-            meilisearch/release/meilisearch
-            meilisearch/release/meilitool
+            meilisearch/target/release/meilisearch
+            meilisearch/target/release/meilitool
 
       - name: Release
         uses: softprops/action-gh-release@v2
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: |
-            meilisearch/release/meilisearch
-            meilisearch/release/meilitool
+            meilisearch/target/release/meilisearch
+            meilisearch/target/release/meilitool
